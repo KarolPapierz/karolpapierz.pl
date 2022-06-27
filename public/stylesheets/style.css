@@ -1,0 +1,145 @@
+:root {
+  --light: #d8dbe0;
+  --dark: #28292c;
+}
+.theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #243133;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+}
+
+
+body {
+  padding: 5em;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--color-secondary);
+  color: var(--font-color)
+}
+
+
+.home-nav {
+  position: absolute;
+  left: 50%;
+  top:1em;
+
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  width: 75%;
+  color: var(--font-color);
+  font-weight: 700;
+  z-index: 2;
+}
+
+.logo {
+  font-family: sans-serif;
+  font-size: xx-large;
+  text-decoration: none; 
+
+}
+
+a:link {
+  color: var(--font-color);
+  text-decoration: none; 
+}
+
+/* visited link */
+a:visited {
+  color: var(--font-colory);
+  text-decoration: none; 
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--font-color);
+  text-decoration: none; 
+}
+
+/* selected link */
+a:active {
+  color: var(--font-color);
+  text-decoration: none; 
+}
+
+.space {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-list{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  padding: 1em;
+}
+
+.toggle-switch {
+  position: absolute;
+  width: 200px;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+input:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: inset 28px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+input:checked ~ .slider::before {
+  transform: translateX(120%);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+#dark-mode{
+  padding-right: 250px;
+  padding-bottom: 100px;
+  top:1em;
+  zoom: 0.3;
+
+}
+
