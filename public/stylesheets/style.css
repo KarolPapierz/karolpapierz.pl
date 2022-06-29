@@ -17,31 +17,28 @@
 
 
 body {
-  padding: 5em;
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 3vh "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: var(--color-secondary);
-  color: var(--font-color)
+  color: var(--font-color);
+  margin-left: auto;
+  margin-right: auto;
+  scroll-behavior: smooth;
+  width: 80%;
 }
 
 
 .home-nav {
   position: absolute;
-  left: 50%;
-  top:1em;
-
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  width: 80%;
   display: flex;
   align-items: center;
-  width: 75%;
   color: var(--font-color);
   font-weight: 700;
-  z-index: 2;
 }
 
 .logo {
   font-family: sans-serif;
-  font-size: xx-large;
+  font-size: 4vh;
   text-decoration: none; 
 
 }
@@ -53,7 +50,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: var(--font-colory);
+  color: var(--font-color);
   text-decoration: none; 
 }
 
@@ -69,21 +66,15 @@ a:active {
   text-decoration: none; 
 }
 
-.space {
+.wrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 30px;
   align-items: center;
+  justify-items: center;
 }
-.nav-list{
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-li {
-  padding: 1em;
-}
+
 
 .toggle-switch {
   position: absolute;
@@ -91,7 +82,7 @@ li {
 }
 
 label {
-  position: absolute;
+  display: inline-block;
   width: 100%;
   height: 100px;
   background-color: var(--dark);
@@ -105,7 +96,6 @@ input {
 }
 
 .slider {
-  position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50px;
@@ -135,11 +125,77 @@ input:checked ~ .slider::before {
   box-shadow: none;
 }
 
-#dark-mode{
-  padding-right: 250px;
-  padding-bottom: 100px;
-  top:1em;
-  zoom: 0.3;
 
+
+#Title{
+padding-top: 10vh;
+height: 80%;
+margin-top: 10vh;
+display:block;
+font-style: bold;
+color: var(--font-color);
+font-weight: bold;
+font-size:150%;
 }
 
+@keyframes rainbow{
+    to {
+    background-position: 4500vh;
+}
+}
+
+#rainbow{
+  display: inline;
+  color: black;
+  background: 
+    linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  color:transparent;
+  animation: rainbow 300s infinite;
+}
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.shownText{
+  color:var(--font-color)
+}
+
+.scroll{
+  padding-top: 15vh;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  font: inherit;
+  color: inherit;
+  align-content: flex;
+  opacity: 1;
+  transform: translate(0, 125%);
+  background-color: transparent;
+  border: none
+}
+
+#dark-mode{
+  transform: translateY(-60px);
+  zoom: 0.3;
+}
+
+.item {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding-top: ;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}

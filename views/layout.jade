@@ -5,25 +5,32 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="/javascripts/page.js") 
     link(rel="icon", href='/images/favicon.png')
+    link( rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
   body
+   
+
     header 
       navbar.home-nav
-        .space
-          a(href="/")
-            .logo KP
-          ul.nav-list 
-            li
-            #dark-mode 
+       .wrapper
+          a(href="/").logo KP
+          div 
+          div
+          div 
+            a(href="https://github.com/KarolPapierz", target='_blank')
+              image(src="/images/GitHub.png",alt="Github", id="githubImage")
+          div
+            a(href="mailto:papierz.karol@gmail.com", target='_blank')
+              image(src="/images/email.png",alt="email",style="width:32px; height:32px;", id="emailImage")
+          div
+            a(href="")
+              image(src="/images/resume.png",alt="resume",style="width:32px; height:32px;", id="resumeImage")
+          div 
+             #dark-mode
               .toggle-switch 
                 label
                   input(type='checkbox', onclick="changeTheme()", id="themeSwitch")
                   .slider
-            li
-              a(href="https://github.com/KarolPapierz", target='_blank')
-                image(src="/images/GitHub.png",alt="Github", id="githubImage")
-            li
-              a(href="mailto:papierz.karol@gmail.com", target='_blank')
-                image(src="/images/email.png",alt="email",style="width:32px; height:32px;", id="emailImage")
-            li 
-              image(src="/images/resume.png",alt="resume",style="width:32px; height:32px;", id="resumeImage")
+
+
+      
     block content

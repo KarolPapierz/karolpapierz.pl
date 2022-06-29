@@ -21,4 +21,3 @@ function changeTheme(){
         resumeImage.style = "width:32px; height:32px;filter: invert(1);";
     }
 }
-

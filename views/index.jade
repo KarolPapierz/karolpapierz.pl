@@ -1,5 +1,22 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+
+  #Title
+    <span> Hi, I'm Karol,</span>
+    <p>I create software for the 
+    #rainbow(onclick="rainbow()") interweb 
+    #combo(style="color:transparent; display:inline; font-size:20px;")
+    
+  script(src="/javascripts/mainpage.js")
+  button(class="scroll", href="#Projects") 
+    span Projects
+    br
+    i(class="fa fa-chevron-down")
+  br
+  br
+  br
+  br
+  br
+  #Projects
+
+ 
